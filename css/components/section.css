@@ -1,0 +1,57 @@
+section {
+    position: relative;
+    top: 60px;
+    bottom: 0;
+    left: 260px;
+    height: calc(100vh - 60px);
+    width: calc(100% - 260px);
+    background: rgb(238, 237, 237);
+    transition: all 0.5s ease;
+}
+
+section .page-container {
+    height: 100%;
+}
+
+section .page-container .page-header {
+    padding: 20px 0;
+    width: 95%;
+    margin: auto;
+}
+
+section .page-container .page-header .page-link {
+    display: flex;
+}
+
+section .page-header .page-link li {
+    list-style: none;
+    display: flex;
+    color: grey;
+}
+
+section .page-header .page-link li i {
+    font-size: 20px;
+    padding: 0 2px;
+}
+
+section .page-header .page-link li span {
+    font-size: 15px;
+    padding: 0 2px;
+}
+
+@media (max-width: 1024px) {
+    section .page-header .page-link li span {
+        font-size: .7em;
+    }
+
+    section .page-header .page-link li i {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        left: 0;
+        width: 100%;
+    }
+}

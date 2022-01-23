@@ -1,0 +1,227 @@
+
+/* WRAP */
+section .page-container .page-content {
+    width: 95%;
+    margin: auto;
+    background: white;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 15px 1fr;
+}
+
+/* GREEN FILL DECORATION */
+section .page-container .page-content .fill-blank {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to left, #3E8E7E, #28c990);
+    border-radius: 8px 8px 0 0;
+}
+
+/* CONTENT WRAP */
+section .page-content .content-details {
+    width: 98%;
+    height: 95%;
+    justify-self: center;
+}
+
+/* BUTTON ADD */
+section .page-content .content-details .head-content {
+    padding: 2px 10px 10px;
+}
+
+section .content-details .head-content a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    padding: 6px 10px;
+    background: #28c990;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+section .content-details .head-content a:hover {
+    background: #3E8E7E;
+}
+
+/* TABLE WRAP */
+section .content-details .table-wrap {
+    width: 100%;
+    /* margin: auto; */
+    height: 335px;
+    overflow: auto;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #28c990;
+}
+
+section .content-details .table-wrap.rekap {
+    margin-bottom: 15px;
+}
+
+/* TABLE */
+section .content-details .content-table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* TABLE HEADER */
+section .content-details .table-wrap .content-table thead {
+    color: white;
+    background: linear-gradient(to left, #3E8E7E, #28c990);
+    position: sticky;
+    top: 0;
+}
+
+section .content-details .table-wrap .content-table thead th {
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+
+/* TABLE BODY */
+section .content-details .table-wrap .content-table tbody td {
+    border-bottom: 1px solid lightgrey;
+    padding-top: 5px;
+}
+
+section .content-details .table-wrap .rekap tbody td {
+    padding: 6px 0;
+}
+
+section .content-details .table-wrap .content-table tbody a {
+    border-radius: 3px;
+    padding:  5px 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+section .content-details .table-wrap .content-table tbody .edit {
+    background: #24a0ed;
+}
+
+section .content-details .table-wrap .content-table tbody .edit:hover {
+    background: #197bb8;
+}
+
+section .content-details .table-wrap .content-table tbody .delete {
+    background: #d11a2a;
+}
+
+section .content-details .table-wrap .content-table tbody .delete:hover {
+    background: #a7111e;
+}
+
+section .content-details .content-table img {
+    width: 50px;
+    height: 50px;
+}
+
+section .content-details .sum {
+    display: flex;
+    justify-content: end;
+    padding: 0 30px 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    section .content-details .table-wrap .content-table {
+        font-size: 14px;
+    }
+
+    section .content-details .content-table img {
+        width: 30px;
+        height: 30px;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+
+    section .content-details .head-content button {
+        font-size: .8em;
+    }
+
+    section .content-details .table-wrap .content-table thead {
+        display: none;
+    }
+
+    section .content-details .table-wrap .content-table tbody,
+    section .content-details .table-wrap .content-table tbody tr,
+    section .content-details .table-wrap .content-table tbody td {
+        display: block;
+        width: 100%;
+    }
+
+    section .content-details .table-wrap .content-table tbody tr{
+        border-bottom: 2px solid #28c990;
+        border-top: 2px solid #28c990;
+        padding: .35em;
+        margin-bottom: .625em;
+        background: whitesmoke;
+        border-radius: 8px;
+    }
+
+    section .content-details .table-wrap .content-table tbody td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        font-size: .8em;
+        margin: 5px 0;
+        /* background: whitesmoke; */
+       
+    }
+
+    section .content-details .table-wrap .content-table tbody td::before {
+        position: absolute;
+        left: 20px;
+        width: 50%;
+        padding-right: 10px;
+        text-align: left;
+        font-weight: 500;
+    }
+
+    .content-table td:nth-of-type(1):before { content: "No"; }
+	.content-table td:nth-of-type(2):before { content: "NIP"; }
+	.content-table td:nth-of-type(3):before { content: "Foto"; }
+	.content-table td:nth-of-type(4):before { content: "Nama"; }
+	.content-table td:nth-of-type(5):before { content: "Email"; }
+	.content-table td:nth-of-type(6):before { content: "Jenis Kelamin"; }
+	.content-table td:nth-of-type(7):before { content: "No.HP"; }
+	.content-table td:nth-of-type(8):before { content: "Pilihan"; }
+
+    .content-table.rekap td:nth-of-type(1):before { content: "No"; }
+	.content-table.rekap td:nth-of-type(2):before { content: "NIP"; }
+	.content-table.rekap td:nth-of-type(3):before { content: "Nama"; }
+	.content-table.rekap td:nth-of-type(4):before { content: "Tanggal"; }
+	.content-table.rekap td:nth-of-type(5):before { content: "Masuk"; }
+	.content-table.rekap td:nth-of-type(6):before { content: "Pulang"; }
+
+    section .content-details .table-wrap .content-table td:last-child {
+        border-bottom: 0;
+    }
+
+    section .content-details .table-wrap .content-table tbody a {
+        padding: 2px 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    section .page-content .content-details .head-content {
+        font-size: .8em;
+    }
+
+    section .page-content .content-details .head-content input {
+        font-size: .8em;
+    }
+
+    section .content-details .sum {
+        padding: 0 30px 10px;
+        font-size: .8em;
+        font-weight: 500;
+    }
+}

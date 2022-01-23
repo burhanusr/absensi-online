@@ -1,0 +1,228 @@
+
+section .dashboard-page {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+section .container {
+    width: 95%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: .8fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+section .user-container {
+    height: 200px;
+    border-radius: 8px;
+    background: linear-gradient(to top, #3E8E7E, #28c990);
+    box-shadow: 0 5px 8px rgb(0 0 0 / 15%);
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+}
+
+section .user-container .user-content {
+    grid-column: 2/3;
+    align-self: center;
+    /* padding-top: 50px; */
+}
+
+section .user-container .user-content .user-level,
+section .user-container .user-content .welcome {
+    color: #fff;
+}
+
+section .school-profile {
+    height: 200px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+    display: flex;
+    align-items: center;
+}
+
+section .school-profile .school-logo img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+section .school-profile .school-details {
+    display: flex;
+    flex-direction: column;
+}
+
+section .school-profile .school-details .school-name {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+section .dashboard-page .content-container {
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    width: 95%;
+    grid-gap: 20px;
+    
+}
+
+section .content-container .feature-wrap {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 15%);
+    padding: 20px;
+    border-left: 5px solid #28c990;
+}
+
+section .content-container .feature-head {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #3E8E7E;
+    border-bottom: 2px solid #28c990;
+}
+
+/* FEATURE - 1 */
+section .content-container .feature-wrap.first {
+    height: 160px;
+}
+
+section .content-container table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 30%;
+    text-align: left;
+}
+
+
+section .content-container table th {
+    font-weight: 500;
+}
+
+
+section .content-container table td {
+    padding-top: 5px;
+}
+
+section .content-container .attendance table td input {
+    border: none;
+    font-size: 16px;
+}
+
+section .content-container .attendance table td input:focus {
+    outline: none;
+}
+
+section .content-container .attendance table td button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+section .content-container .attendance table td button:disabled,
+section .content-container .attendance table td button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+section .content-container .attendance table td .masuk {
+    background: #24A0ED;
+}
+
+section .content-container .attendance table td .masuk:hover:enabled {
+    background: #1d84c4;
+}
+
+section .content-container .attendance table td .pulang {
+    background: #28c990;
+}
+
+section .content-container .attendance table td .pulang:hover:enabled {
+    background: #3E8E7E;
+}
+
+/* FEATURE - 2*/
+section .content-container .feature-wrap.second {
+    padding: 20px 40px;
+}
+
+section .content-container .attendance-list {
+    height: 250px;
+    overflow: auto;
+}
+
+section .content-container .attendance-list thead{
+    position: sticky;
+    top: 0;
+    color: white;
+    background: linear-gradient(to top, #3E8E7E, #28c990);
+}
+
+section .content-container .attendance-list th,
+section .content-container .attendance-list td {
+    padding: 5px;
+}
+
+
+/* Responsive Breakpoint */
+@media (max-width: 1024px) {
+
+    section .container .user-container {
+        grid-column: 1/3;
+        height: 150px;
+    }
+
+    section .container .school-profile {
+        display: none;
+    }
+
+    section .content-container {
+        grid-template-rows: .6fr 1fr;
+        grid-gap: 5px;
+    }
+
+    section .content-container .feature-wrap.first {
+        grid-column: 1/3;
+    }
+
+    section .content-container .feature-wrap.second {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        padding: 20px 10px;
+    }
+
+    section .content-container .attendance-list {
+        height: 150px;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    section .content-container .attendance table td button {
+        padding: 4px 8px;
+
+    }
+
+    section .content-container .attendance table .head {
+        width: 70%;
+        border: 1px solid red;
+    }
+
+    section .content-container .attendance-list table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    section .content-container .attendance table td button {
+        padding: 2px 4px;
+        margin: 0 5px;
+        border-radius: 4px;
+    }
+}

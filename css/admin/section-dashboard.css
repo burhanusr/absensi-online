@@ -1,0 +1,157 @@
+
+section .dashboard-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .user-container {
+    height: 200px;
+    width: 95%;
+    margin-top: 30px;
+    border-radius: 8px;
+    background: linear-gradient(to top, #3E8E7E, #28c990);
+    box-shadow: 0 5px 8px rgb(0 0 0 / 15%);
+    display: grid;
+    grid-template-columns: 55px 1fr;
+}
+
+section .user-container .user-content {
+    grid-column: 2/3;
+    align-self: center;
+    /* padding-top: 50px; */
+}
+
+section .user-container .user-content .user-level,
+section .user-container .user-content .welcome {
+    color: #fff;
+}
+
+
+/* ------------------ CARD CONTENT --------------- */
+section .content-container {
+    width: 95%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+section .content-container .school-profile {
+    height: 180px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+    display: flex;
+    align-items: center;
+}
+
+section .content-container .school-profile .school-logo img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+section .content-container .school-profile .school-details {
+    display: flex;
+    flex-direction: column;
+}
+
+section .content-container .school-profile .school-details .school-name {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+section .content-container .card {
+    height: 150px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+section .content-container .card.attendance {
+    height: 190px;
+}
+
+section .content-container .card .head-card {
+    padding: 10px 0;
+    background: linear-gradient(to left, #3E8E7E, #28c990);
+    border-radius: 8px 8px 0 0;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .content-container .card .head-card i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+section .content-container .card .data-card {
+    padding: 10px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;  
+}
+
+section .content-container .card .data-card .data-date {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid lightgrey;
+}
+
+
+
+/* Responsive Breakpoint */
+@media (max-width: 1024px) {
+    section .content-container .school-profile {
+        grid-area: profile;
+    }
+
+    section .content-container .card {
+        grid-area: teacher;
+    }
+
+    section .content-container .card.card.attendance {
+        grid-area: attendance;
+    }
+
+    section .content-container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "profile profile"
+            "teacher attendance";
+        
+        grid-gap: 10px;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    section .user-container {
+        height: 150px;
+    }
+
+    section .user-container .user-content .user-level {
+        font-size: 20px;
+    }
+
+    section .user-container .user-content .welcome {
+        font-size: 16px;
+    }
+
+    section .content-container .school-profile .school-details {
+        font-size: 16px;
+    }
+}

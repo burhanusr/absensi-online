@@ -1,0 +1,167 @@
+
+section .page-container .page-add {
+    width: 60%;
+    margin: 0px 35px;
+    background: white;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 15px 1fr;
+}
+
+section .page-container .page-add .fill-blank {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to left, #3E8E7E, #28c990);
+    border-radius: 8px 8px 0 0;
+}
+
+section .page-add .content-details .content-wrap {
+    overflow: unset;
+    height: 100%;
+}
+
+section .content-details .content-wrap form {
+    width: 95%;
+    margin: 10px auto 0;
+}
+
+section .content-wrap form .input-form {
+    padding-bottom: 10px;
+}
+
+
+
+
+/* FORM - FOR ALL LABEL IN FORM */
+section .content-wrap form label {
+    display: block;
+    padding: 5px 0;
+}
+
+/* FORM - INPUT for class .input-form */
+section .content-wrap form .input-form input {
+    padding: 5px;
+    width: 100%;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid lightgrey;
+}
+
+section .content-wrap form .input-form input:focus {
+    border: 2px solid #3E8E7E;
+}
+
+section .content-wrap form .flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+section .content-wrap form .flex .handphone {
+    width: 60%;
+}
+
+section .content-wrap form .flex .gender-wrap {
+    width: 40%;
+}
+
+section .content-wrap form .radio {
+    display: flex;
+    align-items: center;
+}
+
+section .content-wrap form .radio-form {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+section .content-wrap form .radio-form label {
+    padding-left: 5px;
+}
+
+section .content-wrap form .input-form input.password {
+    width: 90%;
+    margin-right: 0;
+}
+
+section .content-wrap form .input-form i {
+    padding: 0 5px;
+    font-size: 18px;
+    color: #7a797e;
+    cursor: pointer;
+}
+
+section .content-wrap form .file-form .profile-image img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+
+/* BUTTON */
+section .content-details .content-wrap .btn-form {
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section .content-details .content-wrap .btn-form button {
+    margin: 0 5px;
+}
+
+/* BUTTON - SUBMIT */
+section .content-details .content-wrap .btn-form .btn-submit {
+    padding: 8px 15px;
+    background: #00C851;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+section .content-details .content-wrap .btn-form .btn-submit:hover {
+    background: #007E33;
+}
+
+/* BUTTON - CANCEL */
+section .content-details .content-wrap .btn-form a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #00C851;
+    padding: 6px 10px;
+    background: #fff;
+    border: 2px solid #00C851;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+section .content-details .content-wrap .btn-form a:hover {
+    background: #ececec;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    section .page-container .page-add {
+        width: 95%;
+        margin: auto;
+        font-size: 1em;
+    }
+
+    section .content-details .content-wrap .btn-form button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    section .page-container .page-add {
+        font-size: .8em;
+    }
+
+    section .content-details .content-wrap .btn-form button {
+        font-size: .8em;
+    }
+}

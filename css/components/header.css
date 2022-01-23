@@ -1,0 +1,162 @@
+/* IMPORT GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "sidebar.css";
+@import "section.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER CSS */
+header {  
+    position: fixed;
+    left: 260px;
+    width: calc(100% - 260px);
+    background: #fff;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 15%);
+    /* box-shadow: 0 5px 2px -2px rgb(0 0 0 / 15%); */
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+
+/* HEADER POSITION - SIDEBAR CLOSE */
+.sidebar.close ~ header,
+.sidebar.close ~ section {
+    left: 60px;
+    width: calc(100% - 60px);
+}
+
+header .head-container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header .head-container .head-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .head-container .head-title .bx-menu,
+header .head-container .head-title .text {
+    color: #1d1b31;
+    font-size: 35px;;
+}
+
+header .head-container .head-title .bx-menu {
+    margin: 0 10px 0 15px;
+    cursor: pointer;
+}
+
+header .head-container .head-title .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+header .head-container .head-profile {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    margin-right: 15px;
+
+  
+}
+
+header .head-container .head-profile a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+}
+
+header .head-container .head-profile a:hover {
+    background: whitesmoke;
+    border-radius: 8px;
+}
+
+header .head-profile .name-job {
+    padding: 0 5px 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-left: 2px solid lightgrey;
+}
+
+header .head-profile .name-job .profile-name {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header .head-profile .name-job .job {
+    font-size: 11px;
+    color: #3E8E7E;
+
+}
+
+header .head-profile .profile-content {
+    display: flex;
+    align-items: center;
+}
+
+header .head-profile .profile-content img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        left: 0;
+        width: 100%;
+    }
+
+    .sidebar.close ~ header,
+    .sidebar.close ~ section {
+        left: 0;
+        width: 100%;
+    }
+
+    
+
+    header .head-container .head-title .text,
+    header .head-container .head-title .bx-menu {
+        font-size: 30px;
+    }
+
+    header .head-container .head-title .text {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .sidebar.close ~ header .head-container .head-title .text,
+    .sidebar.close ~ header .head-profile .name-job {
+        display: block;
+        text-align: end;
+    }
+}
+
+@media (max-width: 600px) {
+
+
+    header .head-profile .name-job {
+        display: none;
+    }
+
+    .sidebar.close ~ header .head-profile .name-job {
+        display: none;
+    }
+
+}
+
+

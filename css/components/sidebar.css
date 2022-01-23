@@ -1,0 +1,227 @@
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #3E8E7E;
+    z-index: 1;
+    transition: all 0.5s ease;
+    box-shadow: 5px 0 10px rgba(0,0,0,.1);
+}
+
+.sidebar.close {
+    width: 60px;
+}
+
+/* ------ LOGO ------ */
+/* LOGO - WRAP */
+.sidebar .logo-details {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LOGO - IMAGE */
+.sidebar .logo-details img {
+    width: 200px;
+    transition: 0.3 ease;
+    transition-delay: 0.1s;
+}
+
+.sidebar.close .logo-details img {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+/* -----------------------------------------------------------*/
+
+
+/* -------- TABLE -------- */
+/* TABLE WRAP */
+.sidebar .nav-links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.sidebar.close .nav-links {
+    overflow: visible;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+/* TABLE - LIST POSITION */
+.sidebar .nav-links li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover {
+    background: #459e8c;
+}
+
+/* TABLE - LIST WRAP */
+.sidebar .nav-links li .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* TABLE - LIST - KEEP ICON SHOW - CLOSE */
+.sidebar.close .nav-links li .icon-link {
+    display: block;
+}
+/* TABLE - LIST - ARROW ICON WRAP */
+.sidebar .nav-links li .icon-link .arrow,
+.sidebar .nav-links li .icon-link .fill {
+    min-width: 50px;
+}
+/* TABLE - LIST - ICON */
+.sidebar .nav-links li i {
+    height: 50px;
+    min-width: 60px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+/* TABLE - LIST - ARROW ICON FEATURE */
+.sidebar .nav-links li.showMenu i.arrow {
+    transform: rotate(-180deg);
+}
+/* TABLE - LIST - HIDE ARROW ICON - CLOSE */
+.sidebar.close .nav-links i.arrow {
+    display: none;
+}
+/* TABLE - LIST - ICON LABEL WRAP */
+.sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+/* TABLE - LIST - LABEL */
+.sidebar .nav-links li a .link_name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+/* TABLE - LIST - HIDE LABEL - CLOSE */
+.sidebar.close .nav-links li a .link_name {
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* TABLE - LIST - SUBMENU WRAP */
+.sidebar .nav-links li .sub-menu {
+    padding: 6px 6px 14px 60px;
+    margin-top: -10px;
+    background: #459e8c;
+    display: none;
+}
+/* TABLE - LIST - ARROW CLICK - SHOW MENU */
+.sidebar .nav-links li.showMenu .sub-menu {
+    display: block;
+}
+/* TABLE - LIST - SUBMENU WRAP (VISIBILITY, POSITION) - CLOSE */
+.sidebar.close .nav-links li .sub-menu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+/* TABLE - LIST HOVER - SHOW SUBMENU - CLOSE */
+.sidebar.close .nav-links li:hover .sub-menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+/* TABLE - LIST - SUBMENU LABEL */
+.sidebar .nav-links li .sub-menu a {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+    opacity: 1;
+}
+
+/* TABLE - HIDE SUBMENU LIST WHEN SIDEBAR OPEN */
+.sidebar .nav-links li .sub-menu .link_name {
+    display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name {
+    font-size: 16px;
+    opacity: 1;
+    display: block;
+    white-space: nowrap;
+}
+
+.sidebar.close .nav-links li .sub-menu.blank {
+    padding: 6px 20px 6px 16px;
+    /* opacity: 0; */
+    /* pointer-events: auto; */
+}
+
+.sidebar.close .nav-links li:hover .sub-menu.blank {
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* ------------------------------------------------- */
+
+/* -------- LOG OUT ------------- */
+.sidebar .log-out {
+    position: fixed;
+    bottom: 0;
+    width: 260px;
+}
+
+.sidebar.close .log-out {
+    width: 60px;
+}
+
+.sidebar .log-out a {
+    transition: all 0.4s ease;
+}
+
+.sidebar .log-out a:hover  {
+    background: #9e4545;
+
+}
+/* -------------------------------- */
+
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        z-index: 1;
+    }
+    .sidebar.close {
+        left: -60px;
+        box-shadow: none;
+    }
+
+}
